@@ -1,7 +1,7 @@
 Course: Software Development (Z_GIS)
 
 Short description
-This repository contains the projects and the assignments we do in this course. 
+This repository contains multiple course projects and the assignments we do in this course. 
 
 Contents
 - firstprojct/ — the start of learning java 
@@ -11,13 +11,7 @@ Contents
 - LICENSE — project license
 - README.md — this file
 
-Quick usage
-- Open the project folder you need (e.g., project-02/) and follow that project's README for build/run/test steps.
-- To add a new project: create a new folder at the repo root (do not put files inside .git), add a README, then git add → commit → push.
 
-Notes
-- This repo groups multiple course projects in one place for convenience.
-- Replace placeholders (PROJECT_NAME, YOUR NAME) with your details.
 
 Author
-YOUR NAME — Student ID (optional)
+Louis Schmalisch
