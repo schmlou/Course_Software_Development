@@ -1,6 +1,10 @@
 //The code for the second assignment for the course "Practice: Software Development"
 package assignment_02;
 
+//needed for the List and ArrayList function
+import java.util.ArrayList;
+import java.util.List;
+
 /*By creating this Main, you can just call the Method "idw" with the Input*/
 public class Main {
 
@@ -23,6 +27,19 @@ public class Main {
 	 */
 
 	static double[][] idw(double[][] data) {
+		/* Create a copy of the data to store interpolated values 
+		 * by using deepCopy
+		 * DeepCopy ensures that the "original" Data doesn't get changed
+		 * by creating a whole new instance*/
+		double[][] z = deepCopy(data);
+		
+
+		
+		 /* Track positions of estimated NaN values
+		  * is needed to print out the NaN values later
+		  *  */
+		List<String> estimatedValues = new ArrayList<>();
+		 
 
 		double w;
 		double s;
@@ -54,7 +71,7 @@ public class Main {
 								 * unknown (xi & yi) value needs to be calculated:
 								 * d = sqrt((x-xi)² + (y-yi)²)
 								 */
-								double d = Math.sqrt((Math.pow(x - xi, 2)) - (Math.pow(y - yi, 2)));
+								double d = Math.sqrt((Math.pow(x - xi, 2)) + (Math.pow(y - yi, 2)));
 								/*
 								 * Calculate the weights with the calculated distance:
 								 * w = 1/(d with power P) and the power
@@ -66,14 +83,63 @@ public class Main {
 								 * ws = (w*known value) + ... + (w*known value)
 								 */
 								ws = ws + w * data[xi][yi];
-
+								/*
+								 * Calculating the sum of weights
+								 * s = w + w + ... + w
+								 */
+								s = s + w;
 							}
 						}
 					}
+					
+					 /* Calculating the "original" unknown value (NaN) and
+					  * store the estimated value at the position */
+					 estimatedValues.add("Position [" + x + "][" + y + "]: " + z[x][y]);
+
+					 /* The following Print statement 
+					  * only prints out the estimated NaN values 
+					  * the first and last line are just for aesthetic*/
+					
+					System.out.println("=== ESTIMATED NaN VALUES ===");
+					 for (String value : estimatedValues) {
+					 	System.out.println(value);
+					 }
+					System.out.println();
+					System.out.println("=== FULL ARRAY ===");
+					//z = weighted sum/sum of weights
+					z[x][y] = ws / s;
 				}
 			}
 		}
+		printArr(z);
+		return z;
+};
+		/*The following deepCopy makes sure, that we DON'T 
+		 * modify our "original" Data by creating a 
+		 * new deepCopy and returning
+		 * a new instance "copiedArr"*/
+		static double[][] deepCopy(double[][] copyArr) {
+			/*creates new array copedArr with same 
+			 * amount of rows as copyArr*/
+			double[][] copiedArr = new double [copyArr.length][];
+			for(int x = 0; x < copyArr.length; x++) {
+				/* creates array same length as copyArr
+				 * all elements from copyArr[i] to new Array
+				 * new array stored in copiedArr*/
+				copiedArr[x] = java.util.Arrays.copyOf(copyArr[x], copyArr[x].length); 
+			}
+			return copiedArr;
+		}
 
-		// The final estimation Z(P) = weighted Sum/weight
-	}
+
+	// Method to print a 2D array
+	 static void printArr(double[][] printingArr) {
+		 for (int x = 0; x < printingArr.length; x++) {
+			 	for (int y = 0; y < printingArr.length; y++) {
+			 		System.out.print("[" + x + "] [" + y +"]");
+	 }
+			 	System.out.println();
+	 }
+	 }
+	 
 }
