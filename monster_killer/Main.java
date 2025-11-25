@@ -28,7 +28,7 @@ public class Main {
 		p1.getStatus();
 		
 		
-		System.out.println(m1.isAlive());
+		System.out.println(m1.isAlive());	
 		
 	}
 }
