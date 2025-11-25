@@ -117,7 +117,7 @@ public class Main {
 		/*The following deepCopy makes sure, that we DON'T 
 		 * modify our "original" Data by creating a 
 		 * new deepCopy and returning
-		 * a new instance "copiedArr" */
+		 * a new instance "copiedArr"*/
 		static double[][] deepCopy(double[][] copyArr) {
 			/*creates new array copedArr with same 
 			 * amount of rows as copyArr*/
