@@ -6,7 +6,7 @@ This repository contains multiple course projects and the assignments we do in t
 Contents
 - firstprojct/ — the start of learning java 
 - monster_killer/ — a minigame we started
-- assignment_02/ — algorithm for wayfinding
+- assignment_02/ — algorithm for IDW (Inverse Distance Weighting)
 - LICENSE — project license
 - README.md — this file
 
