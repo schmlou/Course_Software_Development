@@ -5,5 +5,5 @@ public class Main{
 	
 	static double compare (double [][] arr) {
 		return 0;
-	}
+	} 
 } 
