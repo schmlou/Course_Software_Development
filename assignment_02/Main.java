@@ -81,7 +81,7 @@ public class Main {
 							}
 						}
 					}
-					// z = weighted sum/sum of weights
+					/* z = weighted sum/sum of weights */
 					z[x][y] = ws / s;
 					/*
 					 * Calculating the "original" unknown value (NaN) and store the estimated value
