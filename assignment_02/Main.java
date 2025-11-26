@@ -131,7 +131,7 @@ public class Main {
 	/*
 	 * The final print function to get the the full array with original data and the
 	 * now estimated NaN values
-	 */
+	 * 	 */
 	static void printArr(double[][] finalArr) {
 		for (int x = 0; x < finalArr.length; x++) {
 			for (int y = 0; y < finalArr[x].length; y++) {
