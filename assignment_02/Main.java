@@ -10,8 +10,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// The Inputs can be seen as kind of a table with rows and columns.
-		double[][] exampleInput = { { Double.NaN, 2.0, 3.5, Double.NaN }, { 1.0, Double.NaN, 4.0, 5.0 },
-				{ Double.NaN, 3.2, Double.NaN, 8.0 } };
+		double[][] exampleInput = { { 1.0, Double.NaN, 3.0 }, { Double.NaN, Double.NaN, 2.0 }, { 4.0, 5.0, Double.NaN } };
 
 		// idw(exampleInput);
 		double[][] z = idw(exampleInput);
