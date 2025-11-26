@@ -101,18 +101,21 @@ public class Main {
 					 /* The following Print statement 
 					  * only prints out the estimated NaN values 
 					  * the first and last line are just for aesthetic*/
-					
-					System.out.println("=== ESTIMATED NaN VALUES ===");
+						 /* Used it for understanding the the loop 
+						  * now not needed and not so nice
+						  * because every loop gets printed out
+						  * =>to much in console ;)*/
+					 
+					/*System.out.println("===Estimated Values===");
 					 for (String value : estimatedValues) {
 					 	System.out.println(value);
 					 }
 					System.out.println();
-					System.out.println("=== FULL ARRAY ===");
+					System.out.println("____Full Array____");*/
 					
 				}
 			}
 		}
-		//printArr(z);
 		return z;
 };
 		/*The following deepCopy makes sure, that we DON'T 
@@ -133,13 +136,16 @@ public class Main {
 		}
 
 
-	// Method to print a 2D array
-	 static void printArr(double[][] arr) {
-		 for (int x = 0; x < arr.length; x++) {
-			 	for (int y = 0; y < arr[x].length; y++) {
+	 /* The final print function
+	  * to get the the full array with
+	  * original data and the now
+	  * estimated NaN values*/
+	 static void printArr(double[][] finalArr) {
+		 for (int x = 0; x < finalArr.length; x++) {
+			 	for (int y = 0; y < finalArr[x].length; y++) {
 			 		/*printf = formated print with min 8 values
 			 		 * and 2 digits after decimal*/
-			 		System.out.printf("%8.2f ",arr[x][y]);
+			 		System.out.printf("%8.2f ",finalArr[x][y]);
 	 }
 			 	System.out.println();
 	 }
