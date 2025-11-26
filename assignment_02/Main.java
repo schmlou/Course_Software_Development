@@ -11,13 +11,14 @@ public class Main {
 	public static void main(String[] args) {
 		// The Inputs can be seen as kind of a table with rows and columns.
 		double[][] exampleInput = {
-				{ 1.0, Double.NaN, 3, 0 },
-				{ Double.NaN, Double.NaN, 2.0 },
-				{ 4.0, 5.0, Double.NaN }
+				{ Double.NaN, 2.0, 3.5, Double.NaN },
+			    { 1.0, Double.NaN, 4.0, 5.0 },
+			    { Double.NaN, 3.2, Double.NaN, 8.0 }
 		};
 
-		idw(exampleInput);
-
+		//idw(exampleInput);
+		double[][] z = idw(exampleInput);
+		printArr(z);
 	}
 	/*
 	 * Looking trough every value of the Input-arrays.
@@ -91,7 +92,8 @@ public class Main {
 							}
 						}
 					}
-					
+					 //z = weighted sum/sum of weights
+					 z[x][y] = ws / s;
 					 /* Calculating the "original" unknown value (NaN) and
 					  * store the estimated value at the position */
 					 estimatedValues.add("Position [" + x + "][" + y + "]: " + z[x][y]);
@@ -106,12 +108,11 @@ public class Main {
 					 }
 					System.out.println();
 					System.out.println("=== FULL ARRAY ===");
-					//z = weighted sum/sum of weights
-					z[x][y] = ws / s;
+					
 				}
 			}
 		}
-		printArr(z);
+		//printArr(z);
 		return z;
 };
 		/*The following deepCopy makes sure, that we DON'T 
@@ -133,10 +134,12 @@ public class Main {
 
 
 	// Method to print a 2D array
-	 static void printArr(double[][] printingArr) {
-		 for (int x = 0; x < printingArr.length; x++) {
-			 	for (int y = 0; y < printingArr.length; y++) {
-			 		System.out.print("[" + x + "] [" + y +"]");
+	 static void printArr(double[][] arr) {
+		 for (int x = 0; x < arr.length; x++) {
+			 	for (int y = 0; y < arr[x].length; y++) {
+			 		/*printf = formated print with min 8 values
+			 		 * and 2 digits after decimal*/
+			 		System.out.printf("%8.2f ",arr[x][y]);
 	 }
 			 	System.out.println();
 	 }
