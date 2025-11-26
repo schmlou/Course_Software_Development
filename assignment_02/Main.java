@@ -1,7 +1,7 @@
-//The code for the second assignment for the course "Practice: Software Development"
+/*The code for the second assignment for the course "Practice: Software Development"*/
 package assignment_02;
 
-//needed for the List and ArrayList function
+/*needed for the List and ArrayList function*
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,10 +9,10 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		// The Inputs can be seen as kind of a table with rows and columns.
+		/* The Inputs can be seen as kind of a table with rows and columns.*/
 		double[][] exampleInput = { { 1.0, Double.NaN, 3.0 }, { Double.NaN, Double.NaN, 2.0 }, { 4.0, 5.0, Double.NaN } };
 
-		// idw(exampleInput);
+		/*Method for calling IDW*/
 		double[][] z = idw(exampleInput);
 		printArr(z);
 	}
@@ -81,7 +81,7 @@ public class Main {
 							}
 						}
 					}
-					// z = weighted sum/sum of weights
+					/* z = weighted sum/sum of weights */
 					z[x][y] = ws / s;
 					/*
 					 * Calculating the "original" unknown value (NaN) and store the estimated value
