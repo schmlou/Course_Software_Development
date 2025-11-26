@@ -12,7 +12,7 @@ public class Main {
 		/* The Inputs can be seen as kind of a table with rows and columns.*/
 		double[][] exampleInput = { { 1.0, Double.NaN, 3.0 }, { Double.NaN, Double.NaN, 2.0 }, { 4.0, 5.0, Double.NaN } };
 
-		/*Method for calling IDW*/
+		/*Method for calling function IDW*/
 		double[][] z = idw(exampleInput);
 		printArr(z);
 	}
