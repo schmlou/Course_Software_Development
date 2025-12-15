@@ -3,8 +3,8 @@ package PenaltyShooter;
 public class Main {
 	
 	public static void main(String[] args) {
-		Player s1 = new Shooter("Emre Can");
-		Player g1 = new Goalkeeper("Roman Weidenfeller");
+		Player s1 = new Shooter("Victor");
+		Player g1 = new Goalkeeper("Louis");
 	
 		System.out.println(s1.getName());
 		System.out.println(g1.getName());
@@ -14,10 +14,10 @@ public class Main {
 			int dive = g1.chooseDirection();
 			
 			if(shot == dive) {
-				System.out.println(g1.getName() + "was succesfull");
+				System.out.println(g1.getName() + " was succesfull");
 				g1.addScore();
 			} else {
-				System.out.println(s1.getName() + "was succesfull");
+				System.out.println(s1.getName() + " was succesfull");
 				s1.addScore();
 			}
 			
