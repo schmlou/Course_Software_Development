@@ -3,8 +3,8 @@ package PenaltyShooter;
 public class Main {
 	
 	public static void main(String[] args) {
-		Player s1 = new Shooter("Victor");
-		Player g1 = new Goalkeeper("Louis");
+		Player s1 = new Shooter("Emre Can");
+		Player g1 = new Goalkeeper("Goalkeeper");
 	
 		System.out.println(s1.getName());
 		System.out.println(g1.getName());
