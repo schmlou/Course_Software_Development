@@ -48,7 +48,7 @@ public class Main {
 
 			if (w.hasTreasure(p.getPlayerX(), p.getPlayerY())) {
 				hasFound = true;
-			} 
+			}
 		}
 
 	}
