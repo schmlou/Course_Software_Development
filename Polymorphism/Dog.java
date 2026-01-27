@@ -10,5 +10,5 @@ public class Dog extends Animal {
 	@Override
 	public String toString() {
 		return "This is ma dawg!";
-	}
+	} 
 }
