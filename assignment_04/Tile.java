@@ -15,11 +15,11 @@ public class Tile {
 		this.isExit = exit;
 	}
 	//check if this tile is a Wall
-	public boolean checkWall() {
+	public boolean getWall() {
 		return this.isWall;
 	}
 	//check if this tile is the Exit
-	public boolean checkExit() {
+	public boolean getExit() {
 		return this.isExit;
 	}
 }
