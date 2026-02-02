@@ -59,7 +59,11 @@ public class Player {
 		return this.energy;
 	}
 	//lose 1 energy for each move
-	public void loseEnergy() {
-		this.energy -= 1;
+	//if there is still energy to use
+	public int loseEnergy() {
+		if (this.energy > 0) {
+			energy = this.energy - 1;
+		}
+		return energy;
 	}
 }
