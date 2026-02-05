@@ -14,8 +14,8 @@ public class Tile {
 	
 	//create an tile either wall or exit
 		public Tile(boolean isWall, boolean isExit) {
-			this.isWall = false;
-			this.isExit = false;
+			this.isWall = isWall;
+			this.isExit = isExit;
 		}
 	
 	//check if this tile is a Wall
