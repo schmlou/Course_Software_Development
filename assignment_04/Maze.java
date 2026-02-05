@@ -9,7 +9,7 @@ public class Maze {
 	private int size;
 	private Random random;
 
-	public Maze(int size, int energy) {
+	public Maze(int size) {
 		this.size = size;
 		// create grid with new tiles, without walls/exit
 		this.grid = new Tile[size][size];
