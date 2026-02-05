@@ -11,6 +11,7 @@ public class Maze {
 
 	public Maze(int size) {
 		this.size = size;
+		this.random = new Random();
 		// create grid with new tiles, without walls/exit
 		this.grid = new Tile[size][size];
 		// generate a grid with empty tiles
