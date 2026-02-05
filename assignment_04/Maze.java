@@ -42,7 +42,7 @@ public class Maze {
 			ranX = random.nextInt(size);
 			ranY = random.nextInt(size);
 			// if its not 0|0 = valid then the given random integers should be used
-			if (ranX != 0 && ranY != 0) {
+			if (ranX != 0 || ranY != 0) {
 				break;
 			}
 		}
