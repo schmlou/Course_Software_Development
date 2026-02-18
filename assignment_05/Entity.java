@@ -3,21 +3,21 @@ package assignment_05;
 public abstract class Entity {
 
 	//private attributes to check position
-	protected int x = 0;
-	protected int y = 0;
+	protected int entityX = 0;
+	protected int entityY = 0;
 	
 	//Constructor for entity
-	public Entity (int x, int y) {
-		this.x = x;
-		this.y = y;
+	public Entity (int entityX, int entityY) {
+		this.entityX = entityX;
+		this.entityY = entityY;
 	}
 	
 	//Getter for X- & Y-Coordinate
 	public int getX() {
-		return this.x;
+		return this.entityX;
 	}
 	public int getY() {
-		return this.y;
+		return this.entityY;
 	}
 	
 	//Move method as abstract so child classes can override
