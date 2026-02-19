@@ -21,5 +21,5 @@ public abstract class Entity {
 	}
 	
 	//Move method as abstract so child classes can override
-	public abstract void move(char direction, Map map);
+	public abstract boolean move(char direction, Map map);
 }
